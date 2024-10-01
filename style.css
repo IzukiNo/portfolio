@@ -59,7 +59,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 8rem;
     background: rgb(0,0,0);
     background: linear-gradient(45deg, rgba(0,0,0,1) 0%, rgba(25,24,24,1) 48%);
 }
@@ -86,7 +86,7 @@ span{
 
 .home-img img{
     position: relative;
-    width: 25vw;
+    width: 15vw;
     border-radius: 50%;
     transition: 0.5s ease;
 }
