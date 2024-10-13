@@ -47,7 +47,25 @@ header{
 
 .logo:hover{
     transform: scale(1.1);
-    border-bottom: 0.1rem solid;
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: rgb(255, 245, 245);
+    margin-left: 4rem;
+    font-weight: 500;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+
+nav a:hover{
+    transform: scale(1.1);
+    color: rgb(255, 187, 187);
+}
+nav a.active{
+    border-bottom: 2px solid rgb(252, 99, 99);
+    color: rgb(253, 102, 102);
+    font-size: 2rem;
 }
 
 section{
