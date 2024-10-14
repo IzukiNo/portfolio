@@ -8,6 +8,9 @@
     border: none;
     outline: none;
     font-family: 'Poppins',sans-serif;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 html{
@@ -133,5 +136,27 @@ span{
 
 iframe{
     display: flex;
-    margin-top: 4rem;
+    margin-top: 10rem;
+    top: 10rem;
+}
+
+.icons{
+    position: absolute;
+    bottom: 6%;
+    right: 5%;
+    color: white;
+}
+
+.icons i{
+    display: block;
+    padding: 12px;
+    font-size: 25px;
+    color: rgb(112, 112, 112);
+    background-color: rgba(99, 99, 99, 0.11);
+    border-radius: 75%;
+    transition: 0.3s ease;
+}
+
+.icons i:hover{
+    transform: translateY(-5px);
 }

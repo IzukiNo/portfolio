@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>IzukiNo</title>
 </head>
 <body>
@@ -15,13 +17,16 @@
             <a href="project.html">Project</a>
         </nav>
     </header>
+    <div class="icons">
+        <a href="#"><i class='bx bxs-chevron-down'></i></a>
+    </div>
     <section class="home">
         <div class="home-img">
             <img src="logo.png" alt="">
         </div>
         <div class="home-content">
             <h1>I'm <span>IzukiNo!</span></h1>
-            <p>Welcome to my first page.</p>
+            <p>An editor also a coder.</p>
             <div class="social-icon">
                 <a href="https://www.facebook.com/IzukiNoVN"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.youtube.com/@IzukiNo"><i class="fa-brands fa-youtube"></i></a>
@@ -29,5 +34,17 @@
             </div>
         </div>
     </section>
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500,
+            delay: 400
+        });
+        ScrollReveal().reveal('.social-icon',{delay: 500, origin:''});
+        ScrollReveal().reveal('.home-img',{delay: 50, origin: 'left'});
+        ScrollReveal().reveal('.home-content',{delay: 50, origin: 'bottom'});
+        ScrollReveal().reveal('nav',{delay: 50, origin: 'top'});
+    </script>
 </body>
 </html>
