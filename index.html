@@ -28,9 +28,9 @@
             <h1>I'm <span>IzukiNo!</span></h1>
             <p>An editor also a coder.</p>
             <div class="social-icon">
-                <a href="https://www.facebook.com/IzukiNoVN"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.youtube.com/@IzukiNo"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://github.com/IzukiNo"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/IzukiNoVN" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.youtube.com/@IzukiNo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://github.com/IzukiNo" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
     </section>
@@ -46,5 +46,16 @@
         ScrollReveal().reveal('.home-content',{delay: 50, origin: 'bottom'});
         ScrollReveal().reveal('nav',{delay: 50, origin: 'top'});
     </script>
+    <div class="footer">
+        <div id="copyright" align="center">
+            &copy;  2024 IzukiNo - All Rights Reserved.
+        </div>
+        <script>
+        (() => {
+            const copyrightElement = document.getElementById("copyright");
+            copyrightElement.innerHTML = "&copy;  "+new Date().getFullYear()+" IzukiNo - All Rights Reserved.";
+        })();
+        </script>
+    </div>
 </body>
 </html>

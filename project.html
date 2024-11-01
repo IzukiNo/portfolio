@@ -41,5 +41,16 @@
         ScrollReveal().reveal('nav',{delay: 20, origin: 'top'});
         ScrollReveal().reveal('.logo',{delay: 5});
     </script>
+    <footer>
+        <div id="copyright" align="center">
+            &copy;  2024 IzukiNo - All Rights Reserved.
+        </div>
+        <script>
+        (() => {
+            const copyrightElement = document.getElementById("copyright");
+            copyrightElement.innerHTML = "&copy;  "+new Date().getFullYear()+" IzukiNo - All Rights Reserved.";
+        })();
+        </script>
+    </footer>
 </body>
 </html>
