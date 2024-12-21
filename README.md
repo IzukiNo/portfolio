@@ -1,1 +1,1 @@
-https://izukino.github.io/portfolio/
+https://izukino.tech
