@@ -21,8 +21,7 @@ body{
     width: 100%;
     height: 100vh;
     overflow-x: hidden;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(25,24,24,1) 48%);
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
 }
 
 header{
@@ -164,6 +163,75 @@ iframe{
     height: 20vw;
 }
 
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px; /* Khoảng cách giữa các card */
+    padding: 16px;
+}
+
+.project-card {
+    width: 400px; /* Tăng chiều rộng */
+    border: 1px solid #333;
+    border-radius: 20px; /* Bo góc lớn hơn */
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+}
+
+/* Hover effect */
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Image section */
+.project-image {
+    width: 100%;
+    height: 250px; /* Tăng chiều cao ảnh */
+    object-fit: cover;
+    border-bottom: 1px solid #333;
+}
+
+/* Content section */
+.project-content {
+    padding: 20px;
+}
+
+.project-title {
+    font-size: 1.8rem; /* Phóng to tiêu đề */
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.project-desc {
+    font-size: 1.1rem; /* Tăng kích thước chữ mô tả */
+    color: #b3b3b3;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Link button */
+.project-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 12px 20px; /* Tăng kích thước nút */
+    border-radius: 10px; /* Bo góc lớn hơn */
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: #0056b3;
+}
+
 @media (max-width: 1000px){
     .home{
         gap:4rem;
@@ -193,6 +261,46 @@ iframe{
         width: 30vh;
         height: 10vw;
         margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-card {
+        width: 90%; /* Card chiếm 90% chiều rộng màn hình */
+        margin: 10px; /* Khoảng cách xung quanh */
+    }
+
+    .project-title {
+        font-size: 1.5rem; /* Giảm kích thước tiêu đề cho mobile */
+    }
+
+    .project-desc {
+        font-size: 1rem; /* Giảm kích thước mô tả cho mobile */
+    }
+
+    .project-link {
+        padding: 10px 16px; /* Giảm padding của nút cho mobile */
+        font-size: 0.9rem; /* Giảm kích thước chữ trong nút */
+    }
+}
+
+/* Extra mobile responsiveness for smaller screens */
+@media screen and (max-width: 480px) {
+    .project-card {
+        width: 100%; /* Card chiếm 100% chiều rộng màn hình */
+    }
+
+    .project-title {
+        font-size: 1.2rem; /* Giảm thêm kích thước tiêu đề cho màn hình rất nhỏ */
+    }
+
+    .project-desc {
+        font-size: 0.9rem; /* Giảm thêm mô tả */
+    }
+
+    .project-link {
+        padding: 8px 14px; /* Giảm kích thước nút thêm nữa */
+        font-size: 0.8rem; /* Kích thước chữ nhỏ hơn nữa */
     }
 }
 
@@ -234,3 +342,85 @@ body::-webkit-scrollbar {
     --scroll-track: rgba(0, 0, 0, 0.61);
     --scroll-thumb-color: #3a3a3adc;
   }
+
+  .home-project{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    gap: 8rem;
+}
+
+.home-project h1{
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 1.3;
+    color: white;
+}
+
+.video-card {
+    width: 350px;
+    background: #1f1f1f; /* Màu nền card tối phù hợp với nền trang */
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Thumbnail Image */
+.video-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Nội dung trong card */
+.video-content {
+    padding: 15px;
+}
+
+.video-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #fff; /* Màu trắng cho tiêu đề */
+    text-decoration: none;
+}
+
+.video-desc {
+    font-size: 1rem;
+    color: #ccc; /* Màu xám sáng cho mô tả */
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Button để mở video */
+.video-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: #ff0000;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.video-link:hover {
+    background-color: #cc0000;
+}
+
+.video-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 100px; /* Khoảng cách giữa các card */
+        padding: 16px;
+    }
