@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./assets/logo.png" type="image/png">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <title>IzukiNo</title>
 </head>
 <body>
@@ -102,6 +103,8 @@ subscribe
             </div>
         </div>
     </section>
+    <div id="particle-background"></div>
+    <script src="Particles.js"></script>
     <script>
         ScrollReveal({
             reset: true,
@@ -110,6 +113,7 @@ subscribe
             delay: 400
         });
         ScrollReveal().reveal('nav',{delay: 20, origin: 'top'});
+        ScrollReveal().reveal('#particle-background',{delay: 500, origin:'top'});
         ScrollReveal().reveal('h1',{delay: 30, origin: 'top'});
         ScrollReveal().reveal('.project-card',{delay: 25, origin: 'bottom',interval: 200,});
         ScrollReveal().reveal('.video-card',{delay: 25, origin: 'bottom',interval: 200,});

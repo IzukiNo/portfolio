@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./assets/logo.png" type="image/png">
     <title>IzukiNo</title>
@@ -35,6 +36,8 @@
             </div>
         </div>
     </section>
+    <div id="particle-background"></div>
+    <script src="Particles.js"></script>
     <script>
         ScrollReveal({
             reset: true,
@@ -43,6 +46,7 @@
             delay: 400
         });
         ScrollReveal().reveal('.social-icon',{delay: 500, origin:''});
+        ScrollReveal().reveal('#particle-background',{delay: 500, origin:'top'});
         ScrollReveal().reveal('.home-img',{delay: 50, origin: 'left'});
         ScrollReveal().reveal('.home-content',{delay: 50, origin: 'bottom'});
         ScrollReveal().reveal('nav',{delay: 50, origin: 'top'});
