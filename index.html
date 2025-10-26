@@ -11,8 +11,8 @@
     <meta name="keywords" content="IzukiNo, Gia Bảo, Minecraft PvP, VNList, Developer, Editor, Portfolio">
     <meta name="author" content="Gia Bảo">
 
-    <meta property="og:title" content="IzukiNo – Developer & Editor">
-    <meta property="og:description" content="Gia Bảo aka IzukiNo – lập trình viên và là Editor người Việt Nam.">
+    <meta property="og:title" content="IzukiNo, Developer & Editor">
+    <meta property="og:description" content="Gia Bảo aka IzukiNo, lập trình viên và là Editor người Việt Nam.">
     <meta property="og:image" content="https://izukino.tech/assets/logo.png">
     <meta property="og:url" content="https://izukino.tech">
     <meta property="og:type" content="website">
@@ -57,54 +57,30 @@
             <a href="/project">Project</a>
         </nav>
     </header>
-
-    <div class="icons">
-        <a href="/"><i class='bx bxs-chevron-down'></i></a>
-    </div>
-
     <section class="home">
-        <div class="home-img">
-            <img src="./assets/logo.png" alt="IzukiNo's Logo">
-        </div>
         <div class="home-content">
             <h1>I'm <span>IzukiNo!</span></h1>
             <p>An editor also a coder.</p>
             <div class="social-icon">
-                <a href="https://www.facebook.com/IzukiNoVN" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.facebook.com/izukinooo" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.youtube.com/@IzukiNo" target="_blank"><i class="fa-brands fa-youtube"></i></a>
                 <a href="https://github.com/IzukiNo" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
         </div>
+        <div class="home-img">
+            <img src="https://cdn.jsdelivr.net/gh/IzukiNo/cdn/portfolio/logo/logo2.png" alt="IzukiNo's Logo">
+        </div>
     </section>
-
     <div id="particle-background"></div>
 
     <script src="Particles.js"></script>
-    <script>
-        ScrollReveal({
-            reset: true,
-            distance: '60px',
-            duration: 2500,
-            delay: 400
-        });
-        ScrollReveal().reveal('.social-icon', { delay: 500, origin: '' });
-        ScrollReveal().reveal('#particle-background', { delay: 500, origin: 'top' });
-        ScrollReveal().reveal('.home-img', { delay: 50, origin: 'left' });
-        ScrollReveal().reveal('.home-content', { delay: 50, origin: 'bottom' });
-        ScrollReveal().reveal('nav', { delay: 50, origin: 'top' });
-    </script>
+    <script src="index.js"></script>
 
-    <div class="footer">
-        <div id="copyright" align="center">
-            &copy; 2024 IzukiNo - All Rights Reserved.
+    <footer>
+        <div id="copyright">
+            &copy; 2025 IzukiNo - All Rights Reserved.
         </div>
-        <script>
-            (() => {
-                const copyrightElement = document.getElementById("copyright");
-                copyrightElement.innerHTML = "&copy;  " + new Date().getFullYear() + " IzukiNo - All Rights Reserved.";
-            })();
-        </script>
-    </div>
+    </footer>
 </body>
 
 </html>

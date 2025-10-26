@@ -64,131 +64,24 @@
             <h1>Coding</h1>
         </div>
         <div class="project-list">
-            <div class="project-card">
-                <img src="./assets/preview1.png" alt="New Year Countdown" class="project-image" />
-                <div class="project-content">
-                    <div class="project-title">New Year Countdown</div>
-                    <div class="project-desc">
-                        A simple countdown timer to the New Year, built with HTML, CSS, and JavaScript. It displays the
-                        number of days, hours, minutes, and seconds remaining until the New Year.
-                    </div>
-                    <a href="https://www.countdown.izukino.tech/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/preview3.png" alt="To do List" class="project-image" />
-                <div class="project-content">
-                    <div class="project-title">To do List</div>
-                    <div class="project-desc">
-                        A simple to-do list app built with Node.js and MongoDB. Users can log in, manage tasks, and keep
-                        everything organized. The app is secure, fast, and easy to use.
-                    </div>
-                    <a href="https://www.todo.izukino.tech/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/preview2.png" alt="XO Game" class="project-image" />
-                <div class="project-content">
-                    <div class="project-title">XO Game</div>
-                    <div class="project-desc">
-                        A simple tic-tac-toe game built with HTML, CSS, and JavaScript. Players can take turns placing
-                        Xs and Os on the board, and the game keeps track of the score. It's a fun and challenging game
-                        for all ages.
-                    </div>
-                    <a href="https://izukino.github.io/XO/" target="_blank" class="project-link">View Project</a>
-                </div>
-            </div>
+            <!-- Projects will be dynamically loaded from data.json -->
         </div>
 
         <div class="title1">
             <h1>Editing</h1>
         </div>
         <div class="video-list">
-            <div class="video-card">
-                <img src="./assets/thumb1.png" alt="Alien Edit" class="video-thumbnail" />
-                <div class="video-content">
-                    <a href="https://youtu.be/d6KPat8Aa48" target="_blank" class="video-title">Alien - The cleanest
-                        minecraft edit</a>
-                    <p class="video-desc">
-                        ALIEN - The cleanest minecraft edit Edited By IzukiNo<br />
-                        TikTok: @izukinoo<br />
-                        Song: LRP Dyl - Alien (feat. Ughlie)
-                    </p>
-                    <a href="https://youtu.be/d6KPat8Aa48" target="_blank" class="video-link">Watch Video</a>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <img src="./assets/thumb2.png" alt="Duotage" class="video-thumbnail" />
-                <div class="video-content">
-                    <a href="https://youtu.be/Q_aNHaiERnc" target="_blank" class="video-title">IzukiNo x CryptidesX -
-                        The Minecraft Duotage</a>
-                    <p class="video-desc">
-                        Montage by IzukiNo & CryptidesX<br />
-                        TikTok: @izukinoo<br />
-                        Song: Rarin - GTA
-                    </p>
-                    <a href="https://youtu.be/Q_aNHaiERnc" target="_blank" class="video-link">Watch Video</a>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <img src="./assets/thumb3.png" alt="Vietnamese Montage" class="video-thumbnail" />
-                <div class="video-content">
-                    <a href="https://youtu.be/DeRVZ3TOtY8" target="_blank" class="video-title">the greatest Vietnamese
-                        ever... ( Ranked Bedwars Montage )</a>
-                    <p class="video-desc">
-                        Edited by IzukiNo – just for fun.<br />
-                        No bm, chill clips only.
-                    </p>
-                    <a href="https://youtu.be/DeRVZ3TOtY8" target="_blank" class="video-link">Watch Video</a>
-                </div>
-            </div>
-
-            <div class="video-card">
-                <img src="./assets/thumb4.png" alt="Spinnin Edit" class="video-thumbnail" />
-                <div class="video-content">
-                    <a href="https://youtu.be/oyZXwG-6LNE" target="_blank" class="video-title">Spinnin</a>
-                    <p class="video-desc">
-                        Thumbnail: https://danmc.carrd.co/<br />
-                        Editor: @IzukiNo
-                    </p>
-                    <a href="https://youtu.be/oyZXwG-6LNE" target="_blank" class="video-link">Watch Video</a>
-                </div>
-            </div>
+            <!-- Videos will be dynamically loaded from data.json -->
         </div>
     </section>
-
     <div id="particle-background"></div>
 
     <script src="Particles.js"></script>
-    <script>
-        ScrollReveal({
-            reset: true,
-            distance: '60px',
-            duration: 2500,
-            delay: 400
-        });
-        ScrollReveal().reveal('nav', { delay: 20, origin: 'top' });
-        ScrollReveal().reveal('#particle-background', { delay: 500, origin: 'top' });
-        ScrollReveal().reveal('h1', { delay: 30, origin: 'top' });
-        ScrollReveal().reveal('.project-card', { delay: 25, origin: 'bottom', interval: 200 });
-        ScrollReveal().reveal('.video-card', { delay: 25, origin: 'bottom', interval: 200 });
-        ScrollReveal().reveal('.logo', { delay: 5 });
-    </script>
-
+    <script src="project.js"></script>
     <footer>
-        <div id="copyright" align="center">
-            &copy; 2024 IzukiNo - All Rights Reserved.
+        <div id="copyright">
+            &copy; 2025 IzukiNo - All Rights Reserved.
         </div>
-        <script>
-            (() => {
-                const copyrightElement = document.getElementById("copyright");
-                copyrightElement.innerHTML = "&copy; " + new Date().getFullYear() + " IzukiNo - All Rights Reserved.";
-            })();
-        </script>
     </footer>
 </body>
 
