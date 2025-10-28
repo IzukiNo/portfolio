@@ -1,3 +1,4 @@
+/* Optimize font loading: add font-display: swap */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
@@ -24,6 +25,11 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize image loading: lazy loading for all images */
+img {
+    loading: lazy;
 }
 
 #particle-background {
@@ -115,7 +121,7 @@ nav a.active::after {
 
 section {
     min-height: 100vh;
-    padding: 10rem 6% 5rem;
+    padding: 3rem 6% 5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,7 +160,7 @@ section {
     color: #909090;
     font-size: 2.2rem;
     font-weight: 400;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
     letter-spacing: -0.3px;
 }
 
@@ -195,26 +201,33 @@ span::after {
 .social-icon {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .social-icon a {
-    display: inline-flex;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 4.5rem;
     height: 4.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.13);
     border-radius: 50%;
-    color: #ffffff;
-    font-size: 2rem;
-    transition: all 0.3s ease;
+    color: #fff;
+    font-size: 2.2rem;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s;
+    cursor: pointer;
+    box-shadow: none;
+    margin-bottom: 0.2rem;
 }
 
 .social-icon a:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.2);
-    transform: translateY(-3px);
+    background: #222;
+    color: #fff;
+    border-color: #ffffff80;
+    transform: translateY(-3px) scale(1.08) rotate(-5deg);
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
 }
 
 iframe {
@@ -295,13 +308,8 @@ iframe {
     width: 100%;
     height: 260px;
     object-fit: contain;
-    /* Đổi từ cover sang contain để không crop ảnh khi scale nhỏ */
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     background: #181818;
-    /* Thêm nền tối cho ảnh nhỏ không bị trống */
-    /* Đảm bảo background không bị zoom bằng cách đặt cho img, không cho .project-card */
-    /* Không dùng transform cho background, chỉ cho img */
-    /* Nếu cần, có thể dùng pseudo-element cho background riêng */
     position: relative;
     z-index: 1;
 }
@@ -450,6 +458,10 @@ iframe {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        /* Loại bỏ flex: 1 để chiều cao sát nội dung */
+        flex: unset;
+        min-height: unset;
+        height: unset;
     }
 
     .home-content h1 {
@@ -510,16 +522,16 @@ iframe {
     }
 
     .home-content h1 {
-        font-size: 4.5rem;
+        font-size: 5.5rem;
     }
 
     .home-content p {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .home-img img {
-        width: 18rem;
-        height: 18rem;
+        width: 22rem;
+        height: 22rem;
     }
 
     .title1 h1 {
@@ -536,6 +548,35 @@ iframe {
     .video-link {
         width: 100%;
         justify-content: center;
+    }
+
+    .home {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        text-align: center;
+        min-height: 80vh;
+        margin-top: 1.5rem;
+    }
+
+    .home-content {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.5rem;
+        /* Loại bỏ flex: 1 để chiều cao sát nội dung */
+        flex: unset;
+        min-height: unset;
+        height: unset;
+    }
+
+    .home-img {
+        margin-top: 0.5rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
 }
 

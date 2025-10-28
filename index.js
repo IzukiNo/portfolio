@@ -79,3 +79,14 @@ document.addEventListener('DOMContentLoaded', () => {
         copyrightElement.innerHTML = "&copy; " + new Date().getFullYear() + " IzukiNo - All Rights Reserved.";
     }
 });
+
+// Optimize image loading: lazy loading for all images
+// Note: CSS cannot set loading=lazy, must be set in HTML/JS
+// Add lazy loading via JS for all images
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('img').forEach(function(img) {
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+    });
+});
