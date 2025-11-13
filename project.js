@@ -1,18 +1,15 @@
-// Extract YouTube video ID from URL
 function getYouTubeVideoId(url) {
     const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
     const match = url.match(regExp);
     return (match && match[2].length === 11) ? match[2] : null;
 }
 
-// Get YouTube thumbnail URL from video URL
 function getYouTubeThumbnail(videoUrl, quality = 'maxresdefault') {
     const videoId = getYouTubeVideoId(videoUrl);
     if (!videoId) return null;
     return `https://img.youtube.com/vi/${videoId}/${quality}.jpg`;
 }
 
-// Load and render projects and videos from JSON
 async function loadData() {
     try {
         const response = await fetch('data.json');
@@ -73,7 +70,6 @@ function renderVideos(videos) {
     videoList.innerHTML = '';
     
     videos.forEach(video => {
-        // Get YouTube thumbnail automatically from video URL
         const thumbnail = video.thumbnail || getYouTubeThumbnail(video.link, 'maxresdefault');
         
         const videoCard = `
@@ -92,12 +88,11 @@ function renderVideos(videos) {
     });
 }
 
-// Initialize ScrollReveal animations - Smooth & Modern
 function initScrollReveal() {
     ScrollReveal({
         reset: false,
         distance: '40px',
-        duration: 1800,  // Slower base duration
+        duration: 1800,
         delay: 0,
         easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
         opacity: 0,
@@ -106,9 +101,7 @@ function initScrollReveal() {
         cleanup: true
     });
 
-    // Small delay to ensure DOM elements are ready
     setTimeout(() => {
-        // Navigation
         ScrollReveal().reveal('nav', { 
             delay: 150, 
             origin: 'top',
@@ -116,7 +109,6 @@ function initScrollReveal() {
             duration: 1600
         });
         
-        // Page title
         ScrollReveal().reveal('h1', { 
             delay: 200, 
             origin: 'top',
@@ -124,7 +116,6 @@ function initScrollReveal() {
             duration: 1800
         });
         
-        // Logo
         ScrollReveal().reveal('.logo', { 
             delay: 100,
             distance: '10px',
@@ -132,7 +123,6 @@ function initScrollReveal() {
             duration: 1600
         });
 
-        // Regular project cards - stagger with viewFactor
         ScrollReveal().reveal('.project-card', { 
             delay: 0,
             origin: 'bottom',
@@ -149,7 +139,6 @@ function initScrollReveal() {
             }
         });
 
-        // Video cards - stagger animation
         ScrollReveal().reveal('.video-card', { 
             delay: 0,
             origin: 'bottom',
@@ -166,16 +155,14 @@ function initScrollReveal() {
             }
         });
 
-        // Particle background
         ScrollReveal().reveal('#particle-background', { 
             delay: 0, 
             duration: 2500,
             opacity: 0,
             scale: 1
         });
-    }, 100);  // 100ms delay to ensure elements are in DOM
+    }, 100);
 
-    // Header scroll effect
     const header = document.querySelector('header');
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 50) {
@@ -186,13 +173,11 @@ function initScrollReveal() {
     });
 }
 
-// Dynamic copyright year
 function updateCopyright() {
     const copyrightElement = document.getElementById("copyright");
     copyrightElement.innerHTML = "&copy; " + new Date().getFullYear() + " IzukiNo - All Rights Reserved.";
 }
 
-// Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
     loadData();
     updateCopyright();

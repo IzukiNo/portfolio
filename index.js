@@ -1,17 +1,15 @@
-// ScrollReveal configuration for index page - Smooth & Modern
 ScrollReveal({
-    reset: false,        // Không reset animation khi scroll lại
-    distance: '30px',    // Khoảng cách di chuyển nhỏ hơn, tự nhiên hơn
-    duration: 1800,      // 1.8s - slower, more elegant
-    delay: 0,            // Không delay mặc định
-    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',  // Easing curve smooth
-    opacity: 0,          // Fade in từ invisible
-    scale: 0.95,         // Scale nhẹ để thêm depth
-    mobile: true,        // Hoạt động trên mobile
-    cleanup: true        // Cleanup sau khi animate xong
+    reset: false,
+    distance: '30px',
+    duration: 1800,
+    delay: 0,
+    easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+    opacity: 0,
+    scale: 0.95,
+    mobile: true,
+    cleanup: true
 });
 
-// Header scroll effect
 let lastScroll = 0;
 const header = document.querySelector('header');
 
@@ -27,7 +25,6 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Reveal animations - Stagger timing tự nhiên
 ScrollReveal().reveal('nav', { 
     delay: 150, 
     origin: 'top',
@@ -64,15 +61,13 @@ ScrollReveal().reveal('.social-icon', {
     duration: 1600
 });
 
-// Particle background fade in nhẹ
 ScrollReveal().reveal('#particle-background', { 
     delay: 0, 
     duration: 2200,
     opacity: 0,
-    scale: 1  // Không scale particle background
+    scale: 1
 });
 
-// Dynamic copyright year - wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', () => {
     const copyrightElement = document.getElementById("copyright");
     if (copyrightElement) {
@@ -80,9 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Optimize image loading: lazy loading for all images
-// Note: CSS cannot set loading=lazy, must be set in HTML/JS
-// Add lazy loading via JS for all images
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('img').forEach(function(img) {
         if (!img.hasAttribute('loading')) {
